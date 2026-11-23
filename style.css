@@ -1,0 +1,32 @@
+:root{color-scheme:light;background:#f7f2df;color:#254b43;font-family:"Microsoft YaHei",system-ui,sans-serif}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;display:grid;place-items:center;background:radial-gradient(ellipse at 85% 5%,#fffbed,transparent 60%),#f7f2df}
+main{width:min(100% - 40px,1040px);margin:30px auto}
+header,footer{display:flex;justify-content:space-between;align-items:flex-end;gap:16px}
+header{margin:0 0 19px}header p,footer p{margin:0;color:#47675c;font-size:.95rem}
+.eyebrow{color:#557566;font-size:.73rem;font-weight:800;letter-spacing:.24em}
+h1{margin:3px 0 0;font-size:clamp(2rem,6vw,3.6rem);line-height:1.08;letter-spacing:.035em}h1 span{color:#cf795b}
+.stage{position:relative;overflow:hidden;border:4px solid #31564c;border-radius:27px;background:#b5e4e7;box-shadow:0 8px 0 #c0c9a3}
+svg{display:block;width:100%;height:auto}.hidden{display:none}
+.badge{position:absolute;top:14px;left:15px;border-radius:20px;padding:6px 11px;background:#fff9e5;color:#365b4f;font-size:.74rem;font-weight:800}
+footer{align-items:center;margin-top:22px;min-height:53px}
+button{display:flex;align-items:center;gap:10px;flex:none;border:0;border-radius:14px;padding:10px 14px;background:#31594e;color:#fff8e5;font:inherit;font-weight:800;box-shadow:0 4px 0 #24453c;cursor:pointer}
+button:hover{background:#3d6c5e}button:active{transform:translateY(2px);box-shadow:0 2px 0 #24453c}button:focus-visible{outline:3px solid #be7757;outline-offset:4px}
+button{touch-action:none;user-select:none}
+kbd{padding:3px 8px;border-radius:6px;background:#fff9df;color:#31594e;font:inherit;font-size:.78rem}
+.journal{margin-top:22px;padding:14px 16px 16px;border:1px solid #d5dbbd;border-radius:18px;background:#fbf8e9}
+.journal-header{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px}
+.journal-header h2,.journal-header p{margin:0}.journal-header h2{font-size:1.1rem}.journal-header p{font-size:.83rem;color:#47675c}
+.journal-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin:0;padding:0;list-style:none}
+.journal-card{display:flex;align-items:center;gap:10px;min-width:0;padding:8px 10px;border:1px dashed #cdd4bd;border-radius:12px;background:#f5f4e8;color:#47675c}
+.journal-card.unlocked{background:#eff4df;border:1px solid #a9ba8a;color:#254b43}
+.journal-card strong{margin-right:.4em}.journal-card small,.journal-card span{font-size:.76rem}.journal-card span{display:block;margin-top:3px}
+.fish-icon{width:30px;flex:none;color:#a3ad99}.unlocked .fish-icon{color:var(--fish-color)}
+#journal-carp{--fish-color:#c4803d}#journal-bass{--fish-color:#43849a}#journal-koi{--fish-color:#d57136}
+.challenge{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:9px;padding:9px 10px;border:1px solid #e5d4a5;border-radius:12px;background:#fff3d0}
+.challenge strong{font-size:.86rem}.challenge p{margin:3px 0 0;color:#5e6653;font-size:.76rem;line-height:1.45}
+#challenge-badge{flex:none;padding:4px 8px;border-radius:100px;background:#f2e1aa;color:#624e25;font-size:.72rem;font-weight:750}
+.challenge.completed{background:#edf4dd;border-color:#bccb9c}.challenge.completed #challenge-badge{background:#d8e8bf;color:#2b5849}
+#journal-storage{margin:8px 0 0;font-size:.77rem;color:#8d4638}#journal-storage:empty{display:none}
+@media(max-width:550px){main{width:calc(100% - 24px)}header{align-items:flex-start;flex-direction:column;gap:7px}footer p{font-size:.82rem}.stage{border-width:3px;border-radius:17px}.badge{top:7px;left:8px;padding:3px 7px;font-size:.63rem}button{padding:8px 10px;gap:6px}}
+@media(max-width:460px){.journal{padding:12px}.journal-cards{gap:6px}.journal-card{align-items:flex-start;flex-direction:column;gap:4px;padding:7px 6px}.journal-card strong,.journal-card small{display:block}.fish-icon{width:24px}}

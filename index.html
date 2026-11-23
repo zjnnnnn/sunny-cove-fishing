@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>晴湾钓鱼</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="game.js" defer></script>
+</head>
+<body>
+  <main>
+    <header><div><span class="eyebrow">SUNNY COVE · 01</span><h1>晴湾钓鱼<span>。</span></h1></div><p>岸边坐一会儿，等一条鱼。</p></header>
+    <section class="stage" aria-label="晴湾钓鱼游戏">
+      <svg id="scene" viewBox="0 0 960 520" aria-hidden="true">
+        <defs>
+          <linearGradient id="sky" x2="0" y2="1" gradientUnits="objectBoundingBox"><stop stop-color="#a8e0e9"/><stop offset="1" stop-color="#ebf6dc"/></linearGradient>
+          <linearGradient id="lake" x2="0" y2="1" gradientUnits="objectBoundingBox"><stop stop-color="#61c9bb"/><stop offset="1" stop-color="#1e8b90"/></linearGradient>
+          <linearGradient id="bank" x2="0" y2="1" gradientUnits="objectBoundingBox"><stop stop-color="#d8df84"/><stop offset="1" stop-color="#99b65d"/></linearGradient>
+          <clipPath id="water-clip"><path d="M0 327 Q179 290 355 302 Q615 233 960 267 V520 H0Z"/></clipPath>
+          <symbol id="journal-fish" viewBox="0 0 40 30">
+            <path d="M13 15 2 7l3 8-3 8Z" fill="currentColor" opacity=".7"/>
+            <path d="M7 15q10-15 25-7 13 7 0 14Q17 30 7 15Z" fill="currentColor"/>
+            <circle cx="29" cy="12" r="2" fill="#fff9e6"/>
+          </symbol>
+        </defs>
+        <rect width="960" height="520" fill="url(#sky)"/>
+        <circle cx="770" cy="92" r="66" fill="#fff6c5" opacity=".37"/>
+        <circle cx="770" cy="92" r="48" fill="#fff2a4"/>
+        <g fill="#fffdf1" opacity=".78">
+          <path d="M95 108 Q102 87 130 92 Q141 53 174 76 Q200 72 206 98 Q227 93 238 108Z"/>
+          <path d="M480 78 Q492 61 509 66 Q521 42 544 52 Q556 55 563 66 Q586 61 599 78Z"/>
+          <path d="M792 151 Q807 130 826 136 Q845 101 868 122 Q887 118 902 142 Q921 139 929 151Z"/>
+        </g>
+        <path d="M0 219 Q96 125 186 194 Q267 229 354 165 Q407 134 473 178 Q565 228 626 176 Q702 121 778 190 Q860 229 960 169 V324 H0Z" fill="#a4cab0"/>
+        <path d="M0 255 Q96 197 195 226 Q281 253 388 196 Q445 167 520 222 Q582 263 669 218 Q750 177 826 228 Q900 250 960 212 V330 H0Z" fill="#78a890"/>
+        <path d="M0 291 Q160 255 290 280 Q401 293 494 255 Q579 225 677 256 Q768 273 854 244 Q906 230 960 241 V330 H0Z" fill="#5b927e"/>
+        <path d="M0 327 Q179 290 355 302 Q615 233 960 267 V520 H0Z" fill="url(#lake)"/>
+        <g clip-path="url(#water-clip)" fill="none" stroke="#c8f7df" stroke-linecap="round" stroke-width="3" opacity=".47">
+          <path d="M447 294q56-8 101-9m23-2 37-1m132-1 81 2m20 1 29 2M362 343q31-6 68-6m-5 56 73-3m160-35 49-2m97-25 80 5m-25 58 45 3M633 464q55 0 100 5m20 2 53 6M434 475l41-2m-82-11 26-2"/>
+          <path d="M343 315q169-60 393-49 139 1 225 12" opacity=".7"/>
+        </g>
+        <g aria-hidden="true">
+          <g fill="#75a760" stroke="#437d59" stroke-width="2">
+            <path d="M664 358l-13-3a17 6 0 1 1 13 3Z"/><path d="M690 371l-11-4a15 5 0 1 1 11 4Z"/><path d="M707 345l-9-4a13 5 0 1 1 9 4Z"/>
+          </g>
+          <path d="M650 353q-3-15-12-19m13 19q2-20 9-28m-8 29q10-13 17-13" fill="none" stroke="#437d59" stroke-width="3" stroke-linecap="round"/>
+          <path d="M798 366q22-5 46-3m-27 15q28-5 52-2" fill="none" stroke="#c8f7df" stroke-width="2.5" stroke-linecap="round" opacity=".65"/>
+        </g>
+        <g text-anchor="middle" font-size="17" font-weight="800" fill="#f6ffe7" stroke="#347c73" stroke-width="4" paint-order="stroke">
+          <text x="495" y="306">近岸</text>
+          <text x="716" y="313">水草边</text>
+          <text x="848" y="338">开阔水面</text>
+        </g>
+        <g id="fish" clip-path="url(#water-clip)"></g>
+        <path d="M0 290 Q119 283 188 311 Q277 343 301 374 Q334 418 393 456 Q434 478 453 520 H0Z" fill="#aa7855"/>
+        <path d="M0 278 Q108 273 176 302 Q258 320 287 359 Q317 403 369 432 Q424 464 441 508 L444 520 H0Z" fill="url(#bank)"/>
+        <path d="M0 488 Q95 457 151 478 Q227 504 272 485 Q328 458 399 480 L444 520H0Z" fill="#86a85a"/>
+        <g fill="none" stroke="#628c51" stroke-width="4" stroke-linecap="round">
+          <path d="M48 349q-4-16-16-24m17 25q3-22 14-33m-13 34q10-10 21-11M110 423q-7-19-21-24m22 26q3-22 15-28M320 473q-8-19-19-26m20 26q0-24 11-33m-9 33q8-14 22-17"/>
+        </g>
+        <g fill="#fff0a5"><circle cx="32" cy="325" r="5"/><circle cx="64" cy="317" r="5"/><circle cx="91" cy="398" r="4"/><circle cx="126" cy="396" r="5"/><circle cx="333" cy="439" r="5"/></g>
+        <g fill="#698c5c"><ellipse cx="74" cy="466" rx="15" ry="6"/><ellipse cx="95" cy="461" rx="8" ry="4"/><ellipse cx="263" cy="423" rx="12" ry="5"/></g>
+        <ellipse cx="217" cy="384" rx="47" ry="12" fill="#587650" opacity=".28"/>
+        <g stroke="#39483c" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M200 345l-6 34h20l8-22 7 22h21l-8-36" fill="#435f59"/>
+          <path d="M194 372q-13 5-11 12h30l1-9m15 0v9h31q2-8-11-10" fill="#464237"/>
+          <path d="M198 301q18-10 37 1l9 47q-21 10-49 0Z" fill="#f2a454"/>
+          <path d="M198 305q-9 17-6 37l10 5 4-38" fill="#cc6b48"/>
+          <path d="M191 277q1-27 28-30 29-3 34 23l-1 14q-1 24-26 24-25 0-30-17-11 0-10-9 1-5 5-5Z" fill="#ffd1a3"/>
+          <path d="M189 275q-7-28 16-38 31-14 44 17l14 6q6 5-5 8l-30 2Z" fill="#e57654"/>
+          <path d="M189 272l39-9 21-9" fill="none"/>
+          <path d="M238 279v2m-6 11q6 3 11-1" fill="none"/>
+          <path d="M221 313q10 15 28 11l13-7 7 8q-21 23-45 9" fill="#f2a454"/>
+          <circle cx="267" cy="320" r="7" fill="#ffd1a3"/>
+        </g>
+        <path id="line" fill="none" stroke="#fff9df" stroke-width="2"/>
+        <path id="rod" fill="none" stroke="#4f4134" stroke-width="5" stroke-linecap="round"/>
+        <g id="cast-marker" class="hidden" fill="none" stroke="#fff7cc" stroke-width="2.5" stroke-linecap="round">
+          <ellipse rx="20" ry="7" stroke-dasharray="4 4"/><path d="M-4-17l4 5 4-5"/>
+        </g>
+        <g id="bobber" class="hidden"><ellipse rx="18" ry="5" cy="3" fill="none" stroke="#d1f7dc" stroke-width="2"/><path d="M0 1v21" stroke="#cff2dc" stroke-dasharray="3 4"/><circle cy="23" r="3" fill="#ffd780"/><ellipse rx="6" ry="8" fill="#fff8de"/><path d="M-6 0a6 8 0 0 0 12 0Z" fill="#e36e50"/></g>
+        <g id="splash" class="hidden" fill="none" stroke="#fffbe4" stroke-width="3" stroke-linecap="round">
+          <path d="M-32 2q32 12 64 0M-13-5l-7-10m20 9v-15m13 16 7-10"/>
+        </g>
+        <g id="timing-cue" class="hidden" fill="none" stroke="#fff0a0" stroke-linecap="round" stroke-linejoin="round" stroke-width="3.5">
+          <path d="M-29-9l-8 6 8 6m-8-6h22m5 0h5m13 14q12-4 21 0"/>
+          <path d="m3-21 2 5 5 2-5 2-2 5-2-5-5-2 5-2Z" fill="#fff0a0" stroke="none"/>
+        </g>
+        <g id="caught"></g>
+        <g id="charge-meter" class="hidden">
+          <path d="M104 145q0-13 13-13h198q13 0 13 13v65q0 13-13 13h-86l-13 12-13-12h-86q-13 0-13-13Z" fill="#fff9e6" stroke="#35554c" stroke-width="3"/>
+          <text id="charge-hint" x="216" y="158" text-anchor="middle" fill="#35554c" font-size="17" font-weight="800">松开甩竿 · 近岸</text>
+          <text id="charge-detail" x="216" y="181" text-anchor="middle" fill="#47675c" font-size="14" font-weight="700">温顺的鲫鱼，适合练手</text>
+          <text x="122" y="208" fill="#35554c" font-size="13" font-weight="700">力度</text>
+          <rect x="160" y="197" width="150" height="13" rx="6" fill="#dce6c7"/>
+          <rect id="charge-fill" x="160" y="197" width="0" height="13" rx="6" fill="#4e9f77"/>
+          <path d="M233.5 194v19m40.5-19v19" stroke="#35554c" stroke-width="2"/>
+        </g>
+        <g id="meter" class="hidden">
+          <path d="M104 142q0-13 13-13h198q13 0 13 13v68q0 13-13 13h-86l-13 12-13-12h-86q-13 0-13-13Z" fill="#fff9e6" stroke="#35554c" stroke-width="3"/>
+          <text id="meter-hint" x="216" y="155" text-anchor="middle" fill="#35554c" font-size="16" font-weight="800">按空格拉鱼，留意张力</text>
+          <g fill="#35554c" font-size="13" font-weight="700"><text x="122" y="181">进度</text><text x="122" y="208">张力</text></g>
+          <rect x="160" y="170" width="150" height="13" rx="6" fill="#dce6c7"/>
+          <rect id="fill" x="160" y="170" width="0" height="13" rx="6" fill="#4e9f77"/>
+          <rect x="160" y="197" width="150" height="13" rx="6" fill="#f0dfc1"/>
+          <rect id="tension-fill" x="160" y="197" width="0" height="13" rx="6" fill="#ca8050"/>
+          <path d="M265 194v19" stroke="#8d4638" stroke-width="2"/>
+        </g>
+      </svg>
+      <div class="badge">● 晴湾 · 湖畔</div>
+    </section>
+    <footer><p id="status" aria-live="polite">轻按空格钓近岸，按住时看准落点再松开。</p><button id="action" type="button"><kbd>空格</kbd><span id="action-label">甩竿</span></button></footer>
+    <section class="journal" aria-labelledby="journal-title">
+      <div class="journal-header"><h2 id="journal-title">鱼图鉴</h2><p id="journal-summary">已发现 0 / 3 种</p></div>
+      <ul class="journal-cards">
+        <li class="journal-card" id="journal-carp"><svg class="fish-icon" viewBox="0 0 40 30" aria-hidden="true"><use href="#journal-fish"/></svg><div><strong>鲫鱼</strong><small>近岸</small><span id="count-carp">尚未钓到</span></div></li>
+        <li class="journal-card" id="journal-bass"><svg class="fish-icon" viewBox="0 0 40 30" aria-hidden="true"><use href="#journal-fish"/></svg><div><strong>鲈鱼</strong><small>深水</small><span id="count-bass">尚未钓到</span></div></li>
+        <li class="journal-card" id="journal-koi"><svg class="fish-icon" viewBox="0 0 40 30" aria-hidden="true"><use href="#journal-fish"/></svg><div><strong>金鲤</strong><small>深水 · 少见</small><span id="count-koi">尚未钓到</span></div></li>
+      </ul>
+      <div id="koi-challenge" class="challenge">
+        <div><strong>小挑战 · 抓准时机</strong><p>等金鲤的鱼漂往岸边横移，按空格，然后把它钓上岸。</p></div>
+        <span id="challenge-badge">待完成</span>
+      </div>
+      <p id="journal-storage" role="status"></p>
+    </section>
+  </main>
+</body>
+</html>
